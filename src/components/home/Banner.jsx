@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Banner() {
   return (
@@ -19,7 +20,7 @@ export default function Banner() {
             a id nisi.
           </p>
           <button className="btn bg-gray-600 border-gray-600 text-white hover:text-gray-700">
-            Get Started
+            <Link to={"/dashboard/all-products"}>Get Started</Link>
           </button>
         </div>
       </div>

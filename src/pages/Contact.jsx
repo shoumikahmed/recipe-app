@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md my-10">
+    <div className="max-w-md mx-auto p-6 bg-base-300 rounded-md shadow-xl my-10">
       <h2 className="text-2xl font-bold text-center mb-6">Contact Us</h2>
       <form className="space-y-4">
         <div>
@@ -52,7 +52,7 @@ export default function Contact() {
         </div>
         <button
           type="submit"
-          className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md bg-gray-600 border-gray-600 text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
           Submit
         </button>

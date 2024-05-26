@@ -1,12 +1,15 @@
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../firebase/firebase.config";
+import { useNavigate } from "react-router-dom";
 
 export default function GoogleLogin() {
   const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const navigate = useNavigate();
 
   const handleGoogleLogin = () => {
     signInWithGoogle();
   };
+  navigate("/");
 
   return (
     <div className="flex justify-center">
