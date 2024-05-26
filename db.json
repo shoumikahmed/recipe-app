@@ -31,6 +31,22 @@
       "price": "200",
       "description": "The ASICS Gel-Kayano 27 provides premium stability and cushioning, perfect for overpronators seeking a smooth, comfortable run.",
       "image_url": "https://img.freepik.com/free-psd/running-shoes-sneakers-transparent-background_84443-1690.jpg?t=st=1716454980~exp=1716458580~hmac=e037656587873c5960eb058f5bcc654f6d7ac61b6b9fd539d05b6a91b08ac6bf&w=1480"
+    },
+    {
+      "id": "5",
+      "title": "reebok reb 1",
+      "brand": "reebok",
+      "price": "112",
+      "description": "The REEBOK GeKayano 27 provides premium stability and cushioning, perfect for overpronators seeking a smooth, comfortable run.",
+      "image_url": "https://storage.googleapis.com/bitr-cdn/wp-content/uploads/2024/01/reebok-floatzig-1-feature.jpeg"
+    },
+    {
+      "id": "6",
+      "title": "xcghf",
+      "brand": "adidas",
+      "price": "345",
+      "description": "Shop adidas for all styles of men's shoes including casual sneakers, high-performance running shoes, and comfy slides.",
+      "image_url": "https://images-cdn.ubuy.co.in/635fbba5e60d230006128002-adidas-x9000l4-mens-shoes-size-7-5.jpg"
     }
   ]
 }

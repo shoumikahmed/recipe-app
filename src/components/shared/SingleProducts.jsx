@@ -14,7 +14,7 @@ const SingleProducts = ({ shoe }) => {
         <h3 className="text-xl font-semibold">{price}</h3>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">
+          <button className="btn bg-gray-600 border-gray-600 text-white hover:text-gray-700">
             <Link to={`/products/${id}`}>See details</Link>
           </button>
         </div>
