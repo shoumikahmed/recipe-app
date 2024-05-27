@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function EditProducts() {
   const shoe = useLoaderData();
@@ -32,11 +34,18 @@ export default function EditProducts() {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data) {
+          console.log(data);
+          form.reset();
+          toast(`Successfully product's data updated`);
+        }
+      });
   };
 
   return (
     <div>
+      <ToastContainer></ToastContainer>
       <h1 className="text-5xl font-bold text-center">Edit a Product</h1>
 
       <div className="my-16">
@@ -105,7 +114,7 @@ export default function EditProducts() {
             <input
               className="btn mt-4 w-full bg-red-500 text-white p-4 hover:text-black"
               type="submit"
-              value="Add product"
+              value="Update product's data"
             />
           </div>
         </form>

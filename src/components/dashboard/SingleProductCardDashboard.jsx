@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function SingleProductCardDashboard({ shoe, onDelete }) {
   const { id, title, brand, price, description, image_url } = shoe;
@@ -11,14 +13,16 @@ export default function SingleProductCardDashboard({ shoe, onDelete }) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        toast(`Successfully product deleted`);
         onDelete(id);
       });
   };
 
   return (
-    <div className="card w-80 bg-base-100 shadow-xl">
+    <div className="card w-80 bg-base-200 shadow-2xl rounded-lg">
+      <ToastContainer></ToastContainer>
       <figure>
-        <img src={image_url} alt="Shoes" />
+        <img className="p-4" src={image_url} alt="Shoes" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>

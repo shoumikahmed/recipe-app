@@ -1,4 +1,6 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AddProducts() {
   const handleSubmit = async (e) => {
@@ -24,20 +26,26 @@ export default function AddProducts() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        form.reset();
+        if (data) {
+          console.log(data);
+          form.reset();
+          toast(`Successfully product added`);
+        }
       });
   };
 
   return (
-    <div>
-      <h1 className="text-5xl font-bold text-center">Add a Product</h1>
+    <div className="bg-indigo-300 rounded-xl shadow-2xl">
+      <ToastContainer></ToastContainer>
+      <h1 className="text-5xl font-bold text-center pt-8 text-purple-700">
+        Add a Product
+      </h1>
 
-      <div className="my-16">
+      <div className="my-16 p-12">
         <form onSubmit={handleSubmit}>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-full border text-purple-700 border-indigo-100 rounded-lg"
               type="text"
               name="title"
               placeholder="Title"
@@ -45,7 +53,7 @@ export default function AddProducts() {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-full border text-purple-700 border-indigo-100 rounded-lg"
               type="text"
               name="brand"
               placeholder="Brand"
@@ -53,7 +61,7 @@ export default function AddProducts() {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-full border text-purple-700 border-indigo-100 rounded-lg"
               type="number"
               name="price"
               placeholder="Price"
@@ -61,7 +69,7 @@ export default function AddProducts() {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-full border text-purple-700 border-indigo-100 rounded-lg"
               type="text"
               name="description"
               placeholder="Description"
@@ -69,7 +77,7 @@ export default function AddProducts() {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-full border text-purple-700 border-indigo-100 rounded-lg"
               type="text"
               name="image_url"
               placeholder="Image URL"
@@ -77,7 +85,7 @@ export default function AddProducts() {
           </div>
           <div className="mt-2">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-full border text-purple-700 border-indigo-100 rounded-lg"
               type="text"
               name="id"
               placeholder="ID"
@@ -85,7 +93,7 @@ export default function AddProducts() {
           </div>
           <div className="mt-2 flex justify-center items-center">
             <input
-              className="btn mt-4 w-full bg-red-500 text-white p-4 hover:text-black"
+              className="btn mt-4 w-full bg-purple-600 text-white border-purple-500 p-4 hover:text-black hover:bg-indigo-500 hover:border-indigo-500"
               type="submit"
               value="Add product"
             />
