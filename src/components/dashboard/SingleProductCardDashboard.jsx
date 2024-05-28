@@ -30,15 +30,15 @@ export default function SingleProductCardDashboard({ shoe, onDelete }) {
         <h3 className="text-xl font-semibold">{price}</h3>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <button className="btn bg-blue-500 text-white hover:text-black">
+          <button className="bg-gradient-to-r hover:border-purple-400 border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300">
             <Link to={`/products/${id}`}>See details</Link>
           </button>
-          <button className="btn bg-green-500 text-white hover:text-black">
+          <button className="bg-gradient-to-r hover:border-purple-400 border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300">
             <Link to={`/dashboard/edit-products/${id}`}>Edit</Link>
           </button>
           <button
             onClick={handleDelete}
-            className="btn bg-red-500 text-white hover:text-black"
+            className="bg-gradient-to-r hover:border-purple-400 border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300"
           >
             Delete
           </button>

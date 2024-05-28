@@ -19,7 +19,7 @@ export default function Banner() {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <button className="btn bg-gray-600 border-gray-600 text-white hover:text-gray-700">
+          <button className="bg-gradient-to-r border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300">
             <Link to={"/dashboard/all-products"}>Get Started</Link>
           </button>
         </div>

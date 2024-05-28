@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import SingleProducts from "../components/shared/SingleProducts";
 import SingleProductCardDashboard from "../components/dashboard/SingleProductCardDashboard";
 
 export default function AllProducts() {
@@ -17,7 +16,9 @@ export default function AllProducts() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center">All Products</h1>
+      <h1 className="text-5xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-indigo-500">
+        All Products
+      </h1>
       <div className="my-16 flex flex-wrap gap-6">
         {products.map((shoe) => (
           <SingleProductCardDashboard

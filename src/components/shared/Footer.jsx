@@ -35,7 +35,7 @@ export default function Footer() {
               placeholder="username@site.com"
               className="input input-bordered join-item"
             />
-            <button className="btn bg-gray-600 border-gray-600 text-white hover:text-gray-700 join-item">
+            <button className="join-item bg-gradient-to-r border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300">
               Subscribe
             </button>
           </div>

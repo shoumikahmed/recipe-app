@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function AddProducts() {
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -30,6 +32,7 @@ export default function AddProducts() {
           console.log(data);
           form.reset();
           toast(`Successfully product added`);
+          navigate("/dashboard/all-products");
         }
       });
   };
@@ -93,7 +96,7 @@ export default function AddProducts() {
           </div>
           <div className="mt-2 flex justify-center items-center">
             <input
-              className="btn mt-4 w-full bg-purple-600 text-white border-purple-500 p-4 hover:text-black hover:bg-indigo-500 hover:border-indigo-500"
+              className="bg-gradient-to-r hover:border-purple-400 border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300 w-full"
               type="submit"
               value="Add product"
             />

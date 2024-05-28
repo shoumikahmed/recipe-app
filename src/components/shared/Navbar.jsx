@@ -51,7 +51,7 @@ export default function Navbar() {
         </div>
         <a
           href="/"
-          className="btn btn-ghost text-2xl font-bold text-gray-600 hover:text-gray-700"
+          className="btn btn-ghost text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300"
         >
           Culinary Recipes
         </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
           <li>
             <Link
               to={"/"}
-              className="btn btn-ghost text-xl text-gray-600 hover:underline hover:text-gray-700"
+              className="btn btn-ghost text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300"
             >
               Home
             </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
           <li>
             <Link
               to={"/about"}
-              className="btn btn-ghost text-xl text-gray-600 hover:underline hover:text-gray-700"
+              className="btn btn-ghost text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300"
             >
               About
             </Link>
@@ -77,7 +77,7 @@ export default function Navbar() {
           <li>
             <Link
               to={"/contact"}
-              className="btn btn-ghost text-xl text-gray-600 hover:underline hover:text-gray-700"
+              className="btn btn-ghost text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300"
             >
               Contact
             </Link>
@@ -89,13 +89,13 @@ export default function Navbar() {
           <>
             <Link
               to={"/login"}
-              className="btn bg-gray-600 border-gray-600 text-white hover:text-gray-700 mr-2"
+              className="mr-2 bg-gradient-to-r border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300"
             >
               Login
             </Link>
             <Link
               to={"/register"}
-              className="btn bg-gray-600 border-gray-600 text-white hover:text-gray-700"
+              className="bg-gradient-to-r border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300"
             >
               Register
             </Link>
@@ -103,8 +103,8 @@ export default function Navbar() {
         ) : (
           <div className="flex gap-4 items-center">
             <Link
-              to={"/dashboard"}
-              className="btn bg-gray-600 border-gray-600 text-white hover:text-gray-700"
+              to={"/dashboard/home"}
+              className="bg-gradient-to-r border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300"
             >
               Dashboard
             </Link>
@@ -119,7 +119,7 @@ export default function Navbar() {
 
             <button
               onClick={handleSignOut}
-              className="btn bg-gray-600 border-gray-600 text-white hover:text-gray-700"
+              className="bg-gradient-to-r border-purple-400 from-purple-500 to-indigo-500 text-white font-bold btn rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300"
             >
               Logout
             </button>
