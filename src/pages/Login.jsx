@@ -8,8 +8,7 @@ import {
 import auth from "../firebase/firebase.config";
 
 export default function Login() {
-  const navigate = useNavigate();
-  const userInfo = useAuthState(auth);
+  const [userInfo] = useAuthState(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
@@ -23,13 +22,12 @@ export default function Login() {
     signInWithEmailAndPassword(email, password);
   };
 
+  const navigate = useNavigate();
   useEffect(() => {
-    if (userInfo[0]) {
+    if (userInfo) {
       navigate("/");
     }
   }, [navigate, userInfo]);
-
-  console.log(user, loading, error);
 
   return (
     <div className="hero min-h-screen bg-base-200">
